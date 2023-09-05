@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor mp3</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <h2 class="nav_logo">Convertidor MP3</h2>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="#" class="nav_link">Inicio</a></li>
+                <!--<li class="nav_item"><a href="" class="nav_link">Acerca de</a></li> -->
+                <li class="nav_item"><a href="https://www.instagram.com/mateo_alemandi/" class="nav_link" target="_blank">Contacto</a></li>
+            </ul>
+    
+            <figure class="nav_menu">
+                <img src="Imagenes/menu.svg" class="nav_icon" alt="Menú">
+            </figure>
+        </nav>
+
+        <section class="hero_main container">
+            <div class="hero_texts">
+                <h1 class="hero_title">Pruebe el convertidor</h1>
+                <p class="hero_subtitle">Simples pasos obtenga su musica</p>
+                <p class="download_count">Descargas: <span id="downloadCounter">0</span></p>
+                <a href="Ejecutable/Convert Video Mp3.exe" class="hero_cta" id="downloadButton" download>Descargar</a>
+            </div>
+
+            <figure class="hero_picture">
+                <img src="Imagenes/undraw_meditating_re_aiqa.svg" class="hero_img">
+            </figure>
+        </section>
+
+        <div style="height: 150px; overflow: hidden;" class="hero_waves"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-22.85,-36.98 C10.44,128.80 311.79,-57.70 548.81,175.17 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+
+    </header>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const navMenu = document.querySelector('.nav_menu');
+        const navIcon = document.querySelector('.nav_icon');
+        const downloadButton = document.getElementById('downloadButton');
+        const downloadCounter = document.getElementById('downloadCounter');
+    
+        // Recuperar el valor del contador del almacenamiento local
+        let count = localStorage.getItem('downloadCount') || 0;
+    
+        // Mostrar el valor del contador al cargar la página
+        downloadCounter.textContent = count;
+    
+        navIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('show'); // Muestra u oculta la lista de navegación
+        });
+
+        downloadButton.addEventListener('click', () => {
+            count++;
+            downloadCounter.textContent = count;
+        
+        // Guardar el nuevo valor del contador en el almacenamiento local
+        localStorage.setItem('downloadCount', count);
+            });
+        });
+
+    </script>
+</body>
+</html>

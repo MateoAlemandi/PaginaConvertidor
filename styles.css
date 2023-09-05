@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero{
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    color: #fff;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: 
+    "nav"
+    "content";
+    min-height: 100vh;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: auto 1fr; /* Agrega una columna adicional para .nav_list */
+    gap: 1em;
+    align-items: center;
+    height: 90px;
+}
+
+.nav_list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    justify-self: end; /* Alinea a la derecha */
+}
+
+.nav_link{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.nav_log{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.nav_menu{
+    display: none;
+}
+
+.nav_icon{
+    width: 30px;
+}
+
+
+/* Hero Main */
+
+
+/* ... */
+
+
+
+
+
+.hero_title {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    grid-area: title; /* Asigna el área "title" a este elemento */
+}
+
+.hero_subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    grid-area: subtitle; /* Asigna el área "subtitle" a este elemento */
+}
+
+.hero_cta {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px; /* Ajusta el tamaño del botón */
+    border: 1px solid;
+    border-radius: 6px;
+    font-weight: 500;
+    grid-area: cta; /* Asigna el área "cta" a este elemento */
+    align-self: flex-start; /* Alinea el botón hacia arriba dentro de su área */
+}
+
+/* ... */
+
+.hero_cta:hover{
+    background-color: #fff;
+    color: #1e3c72;
+}
+
+/* ... */
+
+
+/* ...
+
+/* Utiliza media query para aplicar el diseño en pantallas más grandes */
+@media (min-width: 768px) {
+    .hero_main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+        align-items: center;
+        gap: 2em;
+    }
+
+    .hero_texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea el texto en la parte superior */
+        text-align: left;
+    }
+
+    .hero_title {
+        font-size: 2.6rem;
+        letter-spacing: 2px;
+    }
+
+    .hero_subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem; /* Agrega margen inferior al subtítulo en pantallas más grandes */
+    }
+
+    .hero_cta {
+        text-decoration: none;
+        color: white;
+        padding: 10px 30px;
+        border: 1px solid;
+        border-radius: 6px;
+        font-weight: 500;
+        margin-top: 1rem; /* Agrega margen superior al botón */
+    }
+
+    .hero_img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        grid-column: 2; /* Coloca la imagen en la segunda columna */
+    }
+}
+
+/* Utiliza media query para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .hero_texts {
+        text-align: center; /* Centra el texto y el botón horizontalmente en pantallas más pequeñas */
+    }
+
+    .hero_cta {
+        margin-top: 1rem; /* Agrega margen superior al botón */
+    }
+}
+
+
+
+/* ... */
+
+/* ...
+
+/* Utiliza media query para aplicar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .hero_main {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección de la columna para apilar elementos verticalmente */
+        text-align: center; /* Centra el contenido en la pantalla */
+    }
+
+    .hero_texts {
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-bottom: 1rem; /* Agrega margen inferior al texto */
+    }
+
+    .hero_img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; /* Asegura que la imagen sea completamente visible */
+    }
+
+    
+    .hero_cta {
+        padding: 8px 20px; /* Reduce el tamaño del botón */
+        font-size: 0.9rem; /* Opcional: ajusta el tamaño de la fuente */
+    }
+}
+
+
+/* ... */
+
+
+/* ...
+
+/* Utiliza media query para aplicar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav_menu {
+        display: none; /* Oculta la lista de navegación en pantallas pequeñas */
+    }
+
+    .nav_icon {
+        display: block; /* Muestra el icono de menú en pantallas pequeñas */
+    }
+
+    /* Estilos adicionales para el icono de menú (puedes personalizarlos) */
+    .nav_icon {
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+
+/* Estilos para pantallas mayores o iguales a 660px */
+.hero_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    align-items: center;
+    gap: 2em;
+}
+
+.hero_texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el texto en la parte superior */
+    text-align: left;
+}
+
+.hero_title {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+
+.hero_subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.hero_cta {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.hero_img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    grid-column: 2; /* Coloca la imagen en la segunda columna */
+}
+
+/* Media query para pantallas menores a 660px */
+@media (max-width: 660px) {
+    .hero_main {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center; /* Centra el contenido en la pantalla */
+    }
+
+    .hero_texts {
+        order: 2; /* Cambia el orden de los textos para que estén después de la imagen */
+        margin-bottom: 1rem; /* Agrega margen inferior al texto */
+    }
+
+    .hero_cta {
+        order: 3; /* Cambia el orden del botón para que esté después de los textos */
+        margin-top: 1rem; /* Agrega margen superior al botón */
+    }
+}
